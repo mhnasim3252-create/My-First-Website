@@ -2,30 +2,20 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <meta name="description"
-          content="Mahfuz Hasan Nasim - Diploma in Computer Science and  Technology student at Gopalganj Govt. Polytechnic Institute  and Web Development Learner.">
+        content="Professional portfolio of Mahfuz Hasan Nasim - Diploma in Computer Technology and Web Development Learner">
 
-    <meta name="author"
-          content="Mahfuz Hasan Nasim">
+    <meta name="author" content="Mahfuz Hasan Nasim">
 
     <title>Mahfuz Hasan Nasim | Portfolio</title>
 
-    <!-- Google Font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
-          rel="stylesheet">
-
     <style>
 
-        /* =========================
+        /* ================================
            GLOBAL
-        ========================= */
+        ================================= */
 
         * {
             margin: 0;
@@ -34,23 +24,11 @@
             scroll-behavior: smooth;
         }
 
-        :root {
-            --primary: #4f46e5;
-            --secondary: #7c3aed;
-            --dark: #0f172a;
-            --dark2: #111827;
-            --light: #f8fafc;
-            --text: #334155;
-            --white: #ffffff;
-            --border: #e2e8f0;
-            --gradient: linear-gradient(135deg, #4f46e5, #7c3aed);
-        }
-
         body {
-            font-family: "Inter", sans-serif;
-            background: var(--light);
-            color: var(--text);
-            line-height: 1.7;
+            font-family: Arial, Helvetica, sans-serif;
+            background: #07111f;
+            color: #ffffff;
+            line-height: 1.6;
         }
 
         a {
@@ -69,310 +47,243 @@
             margin: auto;
         }
 
+
+        /* ================================
+           HEADER
+        ================================= */
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(7, 17, 31, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255,255,255,0.08);
+            z-index: 1000;
+        }
+
+        .nav {
+            height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #38bdf8;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 25px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: #dbeafe;
+            font-size: 15px;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #38bdf8;
+        }
+
+
+        /* ================================
+           HERO
+        ================================= */
+
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding-top: 80px;
+        }
+
+        .hero-content {
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            align-items: center;
+            gap: 60px;
+        }
+
+        .hero-text h1 {
+            font-size: clamp(40px, 7vw, 75px);
+            line-height: 1.05;
+            margin-bottom: 20px;
+        }
+
+        .hero-text h1 span {
+            color: #38bdf8;
+        }
+
+        .hero-text h2 {
+            font-size: 25px;
+            color: #cbd5e1;
+            margin-bottom: 20px;
+        }
+
+        .hero-text p {
+            color: #94a3b8;
+            max-width: 650px;
+            font-size: 17px;
+            margin-bottom: 30px;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 13px 24px;
+            border-radius: 8px;
+            font-weight: bold;
+            transition: 0.3s;
+            display: inline-block;
+        }
+
+        .btn-primary {
+            background: #38bdf8;
+            color: #06101c;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(56,189,248,0.25);
+        }
+
+        .btn-outline {
+            border: 1px solid #38bdf8;
+            color: #38bdf8;
+        }
+
+        .btn-outline:hover {
+            background: #38bdf8;
+            color: #06101c;
+        }
+
+
+        /* ================================
+           PROFILE PHOTO
+        ================================= */
+
+        .profile-area {
+            display: flex;
+            justify-content: center;
+        }
+
+        .profile-inner {
+            width: 310px;
+            height: 310px;
+            border-radius: 50%;
+            padding: 8px;
+            background: linear-gradient(135deg, #38bdf8, #818cf8);
+            box-shadow: 0 0 60px rgba(56,189,248,0.18);
+        }
+
+        .profile-inner img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%;
+            background: #111827;
+        }
+
+
+        /* ================================
+           SECTION
+        ================================= */
+
         section {
             padding: 90px 0;
         }
 
         .section-title {
             text-align: center;
-            margin-bottom: 55px;
+            margin-bottom: 50px;
         }
 
         .section-title h2 {
             font-size: 38px;
-            color: var(--dark);
-            margin-bottom: 12px;
+            margin-bottom: 10px;
+        }
+
+        .section-title span {
+            color: #38bdf8;
         }
 
         .section-title p {
-            color: #64748b;
+            color: #94a3b8;
         }
 
-        /* =========================
-           NAVBAR
-        ========================= */
 
-        header {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            z-index: 1000;
-            background: rgba(255,255,255,0.92);
-            backdrop-filter: blur(12px);
-            border-bottom: 1px solid rgba(226,232,240,0.7);
-        }
-
-        .navbar {
-            min-height: 72px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            font-size: 22px;
-            font-weight: 800;
-            color: var(--dark);
-        }
-
-        .logo span {
-            color: var(--primary);
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 28px;
-            list-style: none;
-        }
-
-        .nav-links a {
-            font-size: 14px;
-            font-weight: 600;
-            color: #475569;
-            transition: 0.3s;
-        }
-
-        .nav-links a:hover {
-            color: var(--primary);
-        }
-
-        .menu-btn {
-            display: none;
-            border: none;
-            background: none;
-            font-size: 28px;
-            cursor: pointer;
-            color: var(--dark);
-        }
-
-        /* =========================
-           HERO
-        ========================= */
-
-        .hero {
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            padding-top: 100px;
-            background:
-                radial-gradient(circle at top right,
-                rgba(79,70,229,0.13),
-                transparent 35%),
-                var(--light);
-        }
-
-        .hero-content {
-            display: grid;
-            grid-template-columns: 1.2fr 0.8fr;
-            gap: 60px;
-            align-items: center;
-        }
-
-        .badge {
-            display: inline-block;
-            padding: 8px 15px;
-            border-radius: 30px;
-            background: #eef2ff;
-            color: var(--primary);
-            font-size: 13px;
-            font-weight: 700;
-            margin-bottom: 20px;
-        }
-
-        .hero h1 {
-            font-size: clamp(42px, 6vw, 70px);
-            line-height: 1.1;
-            color: var(--dark);
-            margin-bottom: 20px;
-        }
-
-        .hero h1 span {
-            background: var(--gradient);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        .hero h3 {
-            font-size: 23px;
-            color: #475569;
-            margin-bottom: 18px;
-        }
-
-        .hero p {
-            max-width: 650px;
-            color: #64748b;
-            margin-bottom: 30px;
-        }
-
-        .hero-buttons {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 15px;
-        }
-
-        .btn {
-            display: inline-block;
-            padding: 13px 24px;
-            border-radius: 9px;
-            font-weight: 700;
-            font-size: 14px;
-            transition: 0.3s;
-        }
-
-        .btn-primary {
-            color: white;
-            background: var(--gradient);
-            box-shadow: 0 10px 25px rgba(79,70,229,0.25);
-        }
-
-        .btn-primary:hover {
-            transform: translateY(-3px);
-        }
-
-        .btn-outline {
-            border: 1px solid var(--border);
-            background: white;
-            color: var(--dark);
-        }
-
-        .btn-outline:hover {
-            border-color: var(--primary);
-            color: var(--primary);
-        }
-
-        /* Profile Card */
-
-        .profile-card {
-            background: white;
-            border: 1px solid var(--border);
-            border-radius: 25px;
-            padding: 35px;
-            text-align: center;
-            box-shadow: 0 25px 60px rgba(15,23,42,0.08);
-        }
-
-        .profile-circle {
-            width: 180px;
-            height: 180px;
-            margin: auto;
-            border-radius: 50%;
-            background: var(--gradient);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: white;
-            font-size: 55px;
-            font-weight: 800;
-        }
-
-        .profile-card h3 {
-            margin-top: 25px;
-            font-size: 24px;
-            color: var(--dark);
-        }
-
-        .profile-card p {
-            color: #64748b;
-            font-size: 14px;
-        }
-
-        /* =========================
+        /* ================================
            ABOUT
-        ========================= */
+        ================================= */
 
         .about {
-            background: white;
+            background: #0a1628;
         }
 
-        .about-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 50px;
-            align-items: center;
+        .about-content {
+            max-width: 850px;
+            margin: auto;
+            text-align: center;
         }
 
-        .about-text h3 {
-            font-size: 28px;
-            color: var(--dark);
-            margin-bottom: 18px;
-        }
-
-        .about-text p {
+        .about-content p {
+            color: #cbd5e1;
+            font-size: 17px;
             margin-bottom: 15px;
-            color: #64748b;
         }
 
-        .info-box {
-            display: grid;
-            gap: 15px;
-        }
 
-        .info-item {
-            padding: 20px;
-            border: 1px solid var(--border);
-            border-radius: 12px;
-            background: #f8fafc;
-        }
-
-        .info-item strong {
-            display: block;
-            color: var(--dark);
-            margin-bottom: 5px;
-        }
-
-        /* =========================
+        /* ================================
            SKILLS
-        ========================= */
+        ================================= */
 
         .skills-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 22px;
+            gap: 20px;
         }
 
         .skill-card {
+            background: #0d1b2e;
             padding: 30px;
-            background: white;
-            border: 1px solid var(--border);
-            border-radius: 16px;
+            border: 1px solid rgba(255,255,255,0.08);
+            border-radius: 14px;
+            text-align: center;
             transition: 0.3s;
         }
 
         .skill-card:hover {
             transform: translateY(-7px);
-            box-shadow: 0 15px 35px rgba(15,23,42,0.08);
-        }
-
-        .skill-icon {
-            width: 50px;
-            height: 50px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 12px;
-            background: #eef2ff;
-            color: var(--primary);
-            font-size: 22px;
-            font-weight: 800;
-            margin-bottom: 18px;
+            border-color: #38bdf8;
         }
 
         .skill-card h3 {
-            color: var(--dark);
-            margin-bottom: 8px;
+            margin-bottom: 10px;
+            color: #38bdf8;
         }
 
         .skill-card p {
-            font-size: 14px;
-            color: #64748b;
+            color: #94a3b8;
         }
 
-        /* =========================
+
+        /* ================================
            PROJECTS
-        ========================= */
+        ================================= */
 
         .projects {
-            background: white;
+            background: #0a1628;
         }
 
         .project-grid {
@@ -382,226 +293,202 @@
         }
 
         .project-card {
-            border: 1px solid var(--border);
-            border-radius: 18px;
-            overflow: hidden;
-            background: #fff;
+            background: #0d1b2e;
+            padding: 30px;
+            border-radius: 14px;
+            border: 1px solid rgba(255,255,255,0.08);
             transition: 0.3s;
         }
 
         .project-card:hover {
             transform: translateY(-7px);
-            box-shadow: 0 20px 40px rgba(15,23,42,0.08);
+            border-color: #38bdf8;
         }
 
-        .project-top {
-            height: 180px;
-            background: var(--gradient);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 35px;
-            font-weight: 800;
+        .project-card h3 {
+            color: #38bdf8;
+            margin-bottom: 12px;
         }
 
-        .project-content {
-            padding: 25px;
+        .project-card p {
+            color: #94a3b8;
+            margin-bottom: 20px;
         }
 
-        .project-content h3 {
-            color: var(--dark);
+
+        /* ================================
+           EDUCATION
+        ================================= */
+
+        .education-card {
+            max-width: 750px;
+            margin: auto;
+            background: #0d1b2e;
+            padding: 35px;
+            border-radius: 15px;
+            border-left: 4px solid #38bdf8;
+        }
+
+        .education-card h3 {
+            color: #38bdf8;
             margin-bottom: 10px;
         }
 
-        .project-content p {
-            color: #64748b;
-            font-size: 14px;
-            margin-bottom: 18px;
+        .education-card p {
+            color: #cbd5e1;
+            margin-bottom: 8px;
         }
 
-        .project-link {
-            color: var(--primary);
-            font-weight: 700;
-            font-size: 14px;
-        }
 
-        /* =========================
-           EDUCATION
-        ========================= */
-
-        .timeline {
-            max-width: 800px;
-            margin: auto;
-        }
-
-        .timeline-item {
-            position: relative;
-            padding: 25px 30px;
-            margin-bottom: 20px;
-            border-left: 4px solid var(--primary);
-            background: white;
-            border-radius: 0 12px 12px 0;
-            box-shadow: 0 8px 25px rgba(15,23,42,0.05);
-        }
-
-        .timeline-item h3 {
-            color: var(--dark);
-            margin-bottom: 5px;
-        }
-
-        .timeline-item p {
-            color: #64748b;
-        }
-
-        /* =========================
+        /* ================================
            CONTACT
-        ========================= */
+        ================================= */
 
         .contact {
-            background: var(--dark);
-            color: white;
+            background: #0a1628;
         }
 
-        .contact .section-title h2 {
-            color: white;
-        }
-
-        .contact .section-title p {
-            color: #94a3b8;
-        }
-
-        .contact-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
-        }
-
-        .contact-card {
-            padding: 30px;
-            border: 1px solid #334155;
-            border-radius: 15px;
+        .contact-box {
+            max-width: 700px;
+            margin: auto;
             text-align: center;
-            background: #111827;
         }
 
-        .contact-card h3 {
-            margin-bottom: 10px;
-        }
-
-        .contact-card p {
+        .contact-box p {
             color: #94a3b8;
-            font-size: 14px;
-            word-break: break-word;
+            margin-bottom: 25px;
         }
 
-        .contact-card a {
-            color: #c7d2fe;
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
         }
 
-        /* =========================
+        .contact-item {
+            padding: 15px 20px;
+            background: #0d1b2e;
+            border: 1px solid rgba(255,255,255,0.08);
+            border-radius: 10px;
+            color: #cbd5e1;
+        }
+
+        .contact-item:hover {
+            border-color: #38bdf8;
+            color: #38bdf8;
+        }
+
+
+        /* ================================
            FOOTER
-        ========================= */
+        ================================= */
 
         footer {
-            background: #020617;
-            color: #94a3b8;
+            padding: 30px 0;
             text-align: center;
-            padding: 25px;
+            background: #050c16;
+        }
+
+        footer p {
+            color: #64748b;
             font-size: 14px;
         }
 
         footer span {
-            color: #818cf8;
+            color: #38bdf8;
         }
 
-        /* =========================
-           RESPONSIVE
-        ========================= */
 
-        @media (max-width: 850px) {
+        /* ================================
+           MOBILE RESPONSIVE
+        ================================= */
 
-            .menu-btn {
-                display: block;
+        @media (max-width: 800px) {
+
+            .nav {
+                height: auto;
+                padding: 18px 0;
+                flex-direction: column;
+                gap: 12px;
             }
 
             .nav-links {
-                display: none;
-                position: absolute;
-                top: 72px;
-                left: 0;
-                width: 100%;
-                background: white;
-                padding: 20px;
-                flex-direction: column;
-                gap: 18px;
-                border-bottom: 1px solid var(--border);
-            }
-
-            .nav-links.active {
-                display: flex;
-            }
-
-            .hero-content,
-            .about-grid {
-                grid-template-columns: 1fr;
+                gap: 15px;
+                flex-wrap: wrap;
+                justify-content: center;
             }
 
             .hero {
+                padding-top: 150px;
+                padding-bottom: 60px;
+            }
+
+            .hero-content {
+                grid-template-columns: 1fr;
                 text-align: center;
             }
 
-            .hero p {
+            .hero-text p {
                 margin-left: auto;
                 margin-right: auto;
             }
 
-            .hero-buttons {
+            .buttons {
                 justify-content: center;
             }
 
-            .profile-card {
-                max-width: 450px;
-                margin: auto;
+            .profile-area {
+                order: -1;
+            }
+
+            .profile-inner {
+                width: 230px;
+                height: 230px;
             }
 
             .skills-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .contact-grid {
                 grid-template-columns: 1fr;
             }
-        }
 
-        @media (max-width: 600px) {
-
-            section {
-                padding: 70px 0;
+            .project-grid {
+                grid-template-columns: 1fr;
             }
 
             .section-title h2 {
                 font-size: 30px;
             }
+        }
 
-            .skills-grid,
-            .project-grid {
-                grid-template-columns: 1fr;
+
+        @media (max-width: 450px) {
+
+            .logo {
+                font-size: 20px;
             }
 
-            .hero h1 {
-                font-size: 43px;
+            .nav-links {
+                font-size: 13px;
+                gap: 10px;
             }
 
-            .hero h3 {
-                font-size: 19px;
+            .hero-text h1 {
+                font-size: 42px;
             }
 
-            .profile-circle {
-                width: 150px;
-                height: 150px;
-                font-size: 45px;
+            .hero-text h2 {
+                font-size: 20px;
             }
+
+            .profile-inner {
+                width: 200px;
+                height: 200px;
+            }
+
+            .contact-info {
+                flex-direction: column;
+            }
+
         }
 
     </style>
@@ -610,23 +497,20 @@
 
 <body>
 
-    <!-- =========================
-         NAVBAR
-    ========================= -->
+
+    <!-- ================================
+         HEADER
+    ================================= -->
 
     <header>
 
-        <div class="container navbar">
+        <div class="container nav">
 
-            <a href="#home" class="logo">
-                Mahfuz<span>.</span>
-            </a>
+            <div class="logo">
+                Mahfuz.
+            </div>
 
-            <button class="menu-btn" onclick="toggleMenu()">
-                ☰
-            </button>
-
-            <ul class="nav-links" id="navLinks">
+            <ul class="nav-links">
 
                 <li>
                     <a href="#home">Home</a>
@@ -645,10 +529,6 @@
                 </li>
 
                 <li>
-                    <a href="#education">Education</a>
-                </li>
-
-                <li>
                     <a href="#contact">Contact</a>
                 </li>
 
@@ -659,568 +539,442 @@
     </header>
 
 
-    <!-- =========================
-         HERO
-    ========================= -->
 
-    <section class="hero" id="home">
+    <!-- ================================
+         HERO SECTION
+    ================================= -->
 
-        <div class="container hero-content">
+    <main>
 
-            <div>
+        <section class="hero" id="home">
 
-                <span class="badge">
-                    👋 Welcome to my portfolio
-                </span>
-
-                <h1>
-                    Hi, I'm
-                    <span>Mahfuz Hasan Nasim</span>
-                </h1>
-
-                <h3>
-                    Diploma in Computer science and Technology at Gopalganj Govt. Polytechnic Institute |
-                    Web Development Learner
-                </h3>
-
-                <p>
-                    I am a Diploma in Computer Science and  Technology student at Gopalganj Govt. Polytechnic Institute 
-                    passionate about Web Development. I am currently
-                    learning HTML, CSS and JavaScript and building
-                    practical projects to improve my development skills.
-                </p>
-
-                <div class="hero-buttons">
-
-                    <a href="#projects"
-                       class="btn btn-primary">
-                        View My Projects
-                    </a>
-
-                    <a href="#contact"
-                       class="btn btn-outline">
-                        Contact Me
-                    </a>
-
-                </div>
-
-            </div>
+            <div class="container hero-content">
 
 
-            <div class="profile-card">
+                <div class="hero-text">
 
-                <div class="profile-circle">
-                    MN
-                </div>
+                    <h1>
+                        Hi, I'm
+                        <span>Mahfuz</span>
+                    </h1>
 
-                <h3>
-                    Mahfuz Hasan Nasim
-                </h3>
-
-                <p>
-                    Computer Science and  Technology Student
-                </p>
-
-                <p>
-                    Web Development Learner
-                </p>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- =========================
-         ABOUT
-    ========================= -->
-
-    <section class="about" id="about">
-
-        <div class="container">
-
-            <div class="section-title">
-
-                <h2>About Me</h2>
-
-                <p>
-                    A little introduction about me
-                </p>
-
-            </div>
-
-
-            <div class="about-grid">
-
-                <div class="about-text">
-
-                    <h3>
-                        Building my skills, one project at a time.
-                    </h3>
+                    <h2>
+                        Web Development Learner
+                    </h2>
 
                     <p>
-                        Hello! I'm Mahfuz Hasan Nasim, a Diploma in
-                        Computer Science and  Technology student from Bangladesh.
+                        I'm Mahfuz Hasan Nasim, a Diploma in Computer Science and Technology
+                        student and a passionate learner interested in Web
+                        Development, HTML, CSS and JavaScript.
                     </p>
 
-                    <p>
-                        I am interested in Web Development and currently
-                        focusing on learning modern web technologies.
-                        My goal is to develop clean, responsive and
-                        user-friendly websites.
-                    </p>
 
-                    <p>
-                        I believe that consistent practice and real
-                        projects are the best ways to become a better
-                        developer.
-                    </p>
+                    <div class="buttons">
+
+                        <a
+                            href="#projects"
+                            class="btn btn-primary">
+                            View My Projects
+                        </a>
+
+                        <a
+                            href="mailto:mhnasim3252@gmail.com"
+                            phone : 01968-740831
+                            class="btn btn-outline">
+                            Contact Me
+                        </a>
+
+                    </div>
 
                 </div>
 
 
-                <div class="info-box">
 
-                    <div class="info-item">
-                        <strong>🎓 Education</strong>
-                        Diploma in  Computer Science and  Technology
-                    </div>
+                <!-- PROFILE PHOTO -->
 
-                    <div class="info-item">
-                        <strong>💻 Focus</strong>
-                        Web Development
-                    </div>
+                <div class="profile-area">
 
-                    <div class="info-item">
-                        <strong>🌐 Location</strong>
-                        Bangladesh
-                    </div>
+                    <div class="profile-inner">
 
-                    <div class="info-item">
-                        <strong>📧 Email</strong>
-                        mhnasim3252@gmail.com 
-                        Phone : 01968-740831
+                        <img
+                            src="profile.jpg"
+                            alt="Mahfuz Hasan Nasim">
+
                     </div>
 
                 </div>
 
             </div>
 
-        </div>
-
-    </section>
+        </section>
 
 
-    <!-- =========================
-         SKILLS
-    ========================= -->
 
-    <section id="skills">
+        <!-- ================================
+             ABOUT SECTION
+        ================================= -->
 
-        <div class="container">
+        <section class="about" id="about">
 
-            <div class="section-title">
+            <div class="container">
 
-                <h2>My Skills</h2>
+                <div class="section-title">
 
-                <p>
-                    Technologies I am learning and practicing
-                </p>
-
-            </div>
-
-
-            <div class="skills-grid">
-
-
-                <div class="skill-card">
-
-                    <div class="skill-icon">
-                        HTML
-                    </div>
-
-                    <h3>
-                        HTML5
-                    </h3>
+                    <h2>
+                        About <span>Me</span>
+                    </h2>
 
                     <p>
-                        Creating structured and semantic web pages
-                        using modern HTML.
+                        A little introduction about me
                     </p>
 
                 </div>
 
 
-                <div class="skill-card">
-
-                    <div class="skill-icon">
-                        CSS
-                    </div>
-
-                    <h3>
-                        CSS3
-                    </h3>
+                <div class="about-content">
 
                     <p>
-                        Designing responsive layouts, components
-                        and modern user interfaces.
+                        Hello! I'm Mahfuz Hasan Nasim.
+                        I am studying Diploma in Computer Science and Technology
+                        and currently learning Web Development.
                     </p>
 
-                </div>
-
-
-                <div class="skill-card">
-
-                    <div class="skill-icon">
-                        JS
-                    </div>
-
-                    <h3>
-                        JavaScript
-                    </h3>
-
                     <p>
-                        Learning programming logic and interactive
-                        web functionality.
+                        I enjoy creating websites and learning new
+                        technologies. My current focus is on improving
+                        my HTML, CSS and JavaScript skills.
                     </p>
 
-                </div>
-
-
-                <div class="skill-card">
-
-                    <div class="skill-icon">
-                        Git
-                    </div>
-
-                    <h3>
-                        Git
-                    </h3>
-
                     <p>
-                        Learning version control and managing
-                        development projects.
-                    </p>
-
-                </div>
-
-
-                <div class="skill-card">
-
-                    <div class="skill-icon">
-                        GH
-                    </div>
-
-                    <h3>
-                        GitHub
-                    </h3>
-
-                    <p>
-                        Publishing projects, managing repositories
-                        and using GitHub Pages.
-                    </p>
-
-                </div>
-
-
-                <div class="skill-card">
-
-                    <div class="skill-icon">
-                        UI
-                    </div>
-
-                    <h3>
-                        Responsive Design
-                    </h3>
-
-                    <p>
-                        Creating websites that work across
-                        mobile, tablet and desktop devices.
+                        My goal is to become a skilled Web Developer
+                        and build useful, modern and responsive websites.
                     </p>
 
                 </div>
 
             </div>
 
-        </div>
-
-    </section>
+        </section>
 
 
-    <!-- =========================
-         PROJECTS
-    ========================= -->
 
-    <section class="projects" id="projects">
+        <!-- ================================
+             SKILLS SECTION
+        ================================= -->
 
-        <div class="container">
+        <section id="skills">
 
-            <div class="section-title">
+            <div class="container">
 
-                <h2>My Projects</h2>
+                <div class="section-title">
 
-                <p>
-                    Some of my learning projects
-                </p>
+                    <h2>
+                        My <span>Skills</span>
+                    </h2>
+
+                    <p>
+                        Technologies I am learning
+                    </p>
+
+                </div>
+
+
+                <div class="skills-grid">
+
+
+                    <div class="skill-card">
+
+                        <h3>HTML</h3>
+
+                        <p>
+                            Creating structured and semantic
+                            web pages using HTML.
+                        </p>
+
+                    </div>
+
+
+                    <div class="skill-card">
+
+                        <h3>CSS</h3>
+
+                        <p>
+                            Designing modern, responsive and
+                            attractive web interfaces.
+                        </p>
+
+                    </div>
+
+
+                    <div class="skill-card">
+
+                        <h3>JavaScript</h3>
+
+                        <p>
+                            Learning JavaScript for interactive
+                            and dynamic websites.
+                        </p>
+
+                    </div>
+
+
+                    <div class="skill-card">
+
+                        <h3>Git</h3>
+
+                        <p>
+                            Learning version control and
+                            managing projects with Git.
+                        </p>
+
+                    </div>
+
+
+                    <div class="skill-card">
+
+                        <h3>GitHub</h3>
+
+                        <p>
+                            Hosting projects and learning
+                            collaborative development.
+                        </p>
+
+                    </div>
+
+
+                    <div class="skill-card">
+
+                        <h3>Responsive Design</h3>
+
+                        <p>
+                            Creating websites that work well
+                            on mobile, tablet and desktop.
+                        </p>
+
+                    </div>
+
+
+                </div>
 
             </div>
 
+        </section>
 
-            <div class="project-grid">
 
 
-                <div class="project-card">
+        <!-- ================================
+             PROJECTS SECTION
+        ================================= -->
 
-                    <div class="project-top">
-                        HTML + CSS
-                    </div>
+        <section class="projects" id="projects">
 
-                    <div class="project-content">
+            <div class="container">
+
+                <div class="section-title">
+
+                    <h2>
+                        My <span>Projects</span>
+                    </h2>
+
+                    <p>
+                        Some of my learning projects
+                    </p>
+
+                </div>
+
+
+                <div class="project-grid">
+
+
+                    <div class="project-card">
 
                         <h3>
                             My First Website
                         </h3>
 
                         <p>
-                            My first website project created while
-                            learning HTML and CSS. This project is
-                            hosted using GitHub Pages.
+                            My first personal website project
+                            created using HTML and CSS.
                         </p>
 
                         <a
                             href="https://mhnasim3252-create.github.io/My-First-Website/"
                             target="_blank"
-                            class="project-link">
+                            class="btn btn-outline">
 
-                            Visit Project →
-                            
+                            Live Website
+
                         </a>
 
                     </div>
 
-                </div>
 
 
-                <div class="project-card">
-
-                    <div class="project-top">
-                        PORTFOLIO
-                    </div>
-
-                    <div class="project-content">
+                    <div class="project-card">
 
                         <h3>
                             Personal Portfolio
                         </h3>
 
                         <p>
-                            A responsive personal portfolio website
-                            designed to showcase my skills, education
-                            and projects.
+                            A responsive portfolio website
+                            created to showcase my skills,
+                            education and projects.
                         </p>
 
-                        <a href="#home"
-                           class="project-link">
+                        <a
+                            href="https://github.com/mhnasim3252-create/My-First-Website"
+                            target="_blank"
+                            class="btn btn-outline">
 
-                            Current Website →
+                            GitHub Repository
 
                         </a>
 
                     </div>
 
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ================================
+             EDUCATION SECTION
+        ================================= -->
+
+        <section id="education">
+
+            <div class="container">
+
+                <div class="section-title">
+
+                    <h2>
+                        My <span>Education</span>
+                    </h2>
+
+                    <p>
+                        Academic background
+                    </p>
+
                 </div>
 
 
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- =========================
-         EDUCATION
-    ========================= -->
-
-    <section id="education">
-
-        <div class="container">
-
-            <div class="section-title">
-
-                <h2>Education</h2>
-
-                <p>
-                    My academic journey
-                </p>
-
-            </div>
-
-
-            <div class="timeline">
-
-
-                <div class="timeline-item">
+                <div class="education-card">
 
                     <h3>
                         Diploma in Computer Science and  Technology
                     </h3>
 
                     <p>
-                        Currently studying Diploma in Computer Science and 
-                        Technology and developing practical skills
-                        in programming and web development.
+                        Currently studying Diploma in Computer Science and Technology.
                     </p>
-
-                </div>
-
-
-                <div class="timeline-item">
-
-                    <h3>
-                        Web Development Learning
-                    </h3>
 
                     <p>
-                        Currently learning HTML, CSS, JavaScript,
-                        Git and GitHub through practical projects.
+                        Focus: Computer Technology & Web Development
                     </p>
 
                 </div>
-
 
             </div>
 
-        </div>
-
-    </section>
+        </section>
 
 
-    <!-- =========================
-         CONTACT
-    ========================= -->
 
-    <section class="contact" id="contact">
+        <!-- ================================
+             CONTACT SECTION
+        ================================= -->
 
-        <div class="container">
+        <section class="contact" id="contact">
 
-            <div class="section-title">
+            <div class="container">
 
-                <h2>Let's Connect</h2>
+                <div class="section-title">
 
-                <p>
-                    Feel free to contact me
-                </p>
-
-            </div>
-
-
-            <div class="contact-grid">
-
-
-                <div class="contact-card">
-
-                    <h3>
-                        📧 Email
-                    </h3>
+                    <h2>
+                        Contact <span>Me</span>
+                    </h2>
 
                     <p>
-                        <a href="mailto:mhnasim3252@gmail.com">
-                            mhnasim3252@gmail.com 
-                            phone : 01968-740831
-                        </a>
+                        Feel free to connect with me
                     </p>
 
                 </div>
 
 
-                <div class="contact-card">
-
-                    <h3>
-                        💻 GitHub
-                    </h3>
+                <div class="contact-box">
 
                     <p>
+                        Interested in working together or
+                        discussing a project? You can contact me
+                        through email or GitHub.
+                    </p>
+
+
+                    <div class="contact-info">
+
+
                         <a
-                            href="https://github.com/mhnasim-create"
+                            class="contact-item"
+                            href="mailto:mhnasim3252@gmail.com">
+                            phone : 01968-740831
+
+                            📧
+                            mhnasim3252@gmail.com
+                            📳 01968-740831
+
+                        </a>
+
+
+                        <a
+                            class="contact-item"
+                            href="https://github.com/mhnasim3252-create"
                             target="_blank">
 
-                            github.com/mhnasim-create
+                            💻
+                            GitHub Profile
 
                         </a>
-                    </p>
+
+
+                    </div>
 
                 </div>
-
-
-                <div class="contact-card">
-
-                    <h3>
-                        📍 Location
-                    </h3>
-
-                    <p>
-                        Bangladesh
-                    </p>
-
-                </div>
-
 
             </div>
 
-        </div>
+        </section>
 
-    </section>
+    </main>
 
 
-    <!-- =========================
+
+    <!-- ================================
          FOOTER
-    ========================= -->
+    ================================= -->
 
     <footer>
 
-        <p>
-            © 2026
-            <span>Mahfuz Hasan Nasim</span>.
-            All Rights Reserved.
-        </p>
+        <div class="container">
+
+            <p>
+                © 2026
+                <span>Mahfuz Hasan Nasim</span>.
+                All Rights Reserved.
+            </p>
+
+            <p>
+                Built with HTML & CSS
+            </p>
+
+        </div>
 
     </footer>
 
 
-    <!-- =========================
-         JAVASCRIPT
-    ========================= -->
-
-    <script>
-
-        function toggleMenu() {
-
-            const navLinks =
-                document.getElementById("navLinks");
-
-            navLinks.classList.toggle("active");
-
-        }
-
-
-        // Close mobile menu after clicking a link
-
-        document.querySelectorAll(".nav-links a")
-            .forEach(function(link) {
-
-                link.addEventListener("click", function() {
-
-                    document
-                        .getElementById("navLinks")
-                        .classList.remove("active");
-
-                });
-
-            });
-
-    </script>
-
 </body>
-    </html>
+</html>
