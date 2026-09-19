@@ -1,1 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <meta name="description"
+          content="Personal portfolio website of a Diploma in Computer Technology student and Web Development learner.">
+
+    <title>My Portfolio | Web Developer</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #0f172a;
+            color: #f8fafc;
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        /* NAVBAR */
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: rgba(15, 23, 42, 0.95);
+            border-bottom: 1px solid #1e293b;
+        }
+
+        nav {
+            min-height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .logo span {
+            color: #38bdf8;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 25px;
+        }
+
+        .nav-links a {
+            color: #cbd5e1;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #38bdf8;
+        }
+
+        /* HERO */
+        .hero {
+            min-height: 90vh;
+            display: flex;
+            align-items: center;
+        }
+
+        .hero-content {
+            max-width: 750px;
+        }
+
+        .hero small {
+            color: #38bdf8;
+            font-size: 18px;
+        }
+
+        .hero h1 {
+            font-size: clamp(42px, 8vw, 75px);
+            line-height: 1.1;
+            margin: 15px 0;
+        }
+
+        .hero h1 span {
+            color: #38bdf8;
+        }
+
+        .hero p {
+            color: #94a3b8;
+            font-size: 19px;
+            max-width: 650px;
+            margin-bottom: 30px;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 13px 25px;
+            border-radius: 8px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .btn-primary {
+            background: #38bdf8;
+            color: #082f49;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+        }
+
+        .btn-outline {
+            border: 1px solid #38bdf8;
+            color: #38bdf8;
+        }
+
+        .btn-outline:hover {
+            background: #38bdf8;
+            color: #082f49;
+        }
+
+        /* SECTIONS */
+        section {
+            padding: 90px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title h2 {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+
+        .section-title p {
+            color: #94a3b8;
+        }
+
+        /* ABOUT */
+        .about-box {
+            background: #1e293b;
+            padding: 35px;
+            border-radius: 15px;
+            border: 1px solid #334155;
+        }
+
+        .about-box p {
+            color: #cbd5e1;
+            font-size: 17px;
+        }
+
+        /* SKILLS */
+        .skills {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            gap: 18px;
+        }
+
+        .skill {
+            background: #1e293b;
+            border: 1px solid #334155;
+            padding: 25px 15px;
+            text-align: center;
+            border-radius: 12px;
+            transition: 0.3s;
+        }
+
+        .skill:hover {
+            transform: translateY(-5px);
+            border-color: #38bdf8;
+        }
+
+        .skill h3 {
+            color: #38bdf8;
+            margin-bottom: 5px;
+        }
+
+        .skill p {
+            color: #94a3b8;
+        }
+
+        /* EDUCATION */
+        .education {
+            background: #111827;
+        }
+
+        .education-card {
+            background: #1e293b;
+            border-left: 4px solid #38bdf8;
+            padding: 25px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        .education-card h3 {
+            margin-bottom: 8px;
+        }
+
+        .education-card p {
+            color: #94a3b8;
+        }
+
+        /* PROJECTS */
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+        }
+
+        .project {
+            background: #1e293b;
+            border: 1px solid #334155;
+            padding: 28px;
+            border-radius: 14px;
+            transition: 0.3s;
+        }
+
+        .project:hover {
+            transform: translateY(-7px);
+            border-color: #38bdf8;
+        }
+
+        .project h3 {
+            color: #38bdf8;
+            margin-bottom: 10px;
+        }
+
+        .project p {
+            color: #94a3b8;
+            margin-bottom: 18px;
+        }
+
+        /* CONTACT */
+        .contact-box {
+            text-align: center;
+            background: #1e293b;
+            padding: 45px 25px;
+            border-radius: 15px;
+            border: 1px solid #334155;
+        }
+
+        .contact-box p {
+            color: #94a3b8;
+            margin: 15px auto 25px;
+            max-width: 600px;
+        }
+
+        /* FOOTER */
+        footer {
+            text-align: center;
+            padding: 30px 15px;
+            border-top: 1px solid #1e293b;
+            color: #94a3b8;
+        }
+
+        footer span {
+            color: #38bdf8;
+        }
+
+        /* MOBILE */
+        @media (max-width: 700px) {
+            nav {
+                flex-direction: column;
+                padding: 15px 0;
+                gap: 12px;
+            }
+
+            .nav-links {
+                gap: 14px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .hero {
+                min-height: 80vh;
+            }
+
+            .hero h1 {
+                font-size: 45px;
+            }
+
+            .hero p {
+                font-size: 16px;
+            }
+
+            section {
+                padding: 65px 0;
+            }
+
+            .section-title h2 {
+                font-size: 30px;
+            }
+
+            .about-box {
+                padding: 25px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    My<span>Portfolio</span>
+                </div>
+
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#education">Education</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+
+                <small>Hello, I'm</small>
+
+                <h1>
+                    Your <span>Name</span>
+                </h1>
+
+                <p>
+                    Diploma in Computer Technology student and
+                    Web Development learner passionate about building
+                    modern and user-friendly websites.
+                </p>
+
+                <div class="buttons">
+                    <a href="#projects" class="btn btn-primary">
+                        View My Projects
+                    </a>
+
+                    <a href="#contact" class="btn btn-outline">
+                        Contact Me
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about">
+        <div class="container">
+
+            <div class="section-title">
+                <h2>About Me</h2>
+                <p>Get to know me</p>
+            </div>
+
+            <div class="about-box">
+                <p>
+                    I am a Diploma in Computer Technology student
+                    interested in Web Development and modern
+                    technology. I am currently learning HTML, CSS
+                    and JavaScript and working on different projects
+                    to improve my practical skills.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills">
+        <div class="container">
+
+            <div class="section-title">
+                <h2>My Skills</h2>
+                <p>Technologies I am learning</p>
+            </div>
+
+            <div class="skills">
+
+                <div class="skill">
+                    <h3>HTML</h3>
+                    <p>Web Structure</p>
+                </div>
+
+                <div class="skill">
+                    <h3>CSS</h3>
+                    <p>Web Design</p>
+                </div>
+
+                <div class="skill">
+                    <h3>JavaScript</h3>
+                    <p>Web Interaction</p>
+                </div>
+
+                <div class="skill">
+                    <h3>Git</h3>
+                    <p>Version Control</p>
+                </div>
+
+                <div class="skill">
+                    <h3>GitHub</h3>
+                    <p>Code Management</p>
+                </div>
+
+                <div class="skill">
+                    <h3>Responsive Design</h3>
+                    <p>Mobile Friendly</p>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- EDUCATION -->
+    <section id="education" class="education">
+        <div class="container">
+
+            <div class="section-title">
+                <h2>Education</h2>
+                <p>My academic journey</p>
+            </div>
+
+            <div class="education-card">
+                <h3>Diploma in Computer Technology</h3>
+                <p>
+                    Polytechnic Institute
+                </p>
+                <p>
+                    Currently studying and developing practical
+                    skills in programming and web development.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects">
+        <div class="container">
+
+            <div class="section-title">
+                <h2>My Projects</h2>
+                <p>Some of my learning projects</p>
+            </div>
+
+            <div class="projects">
+
+                <div class="project">
+                    <h3>My First Website</h3>
+                    <p>
+                        My first website created using HTML and CSS
+                        and hosted with GitHub Pages.
+                    </p>
+
+                    <a href="#" class="btn btn-outline">
+                        View Project
+                    </a>
+                </div>
+
+                <div class="project">
+                    <h3>Digital Clock</h3>
+                    <p>
+                        A simple digital clock project created
+                        while learning JavaScript.
+                    </p>
+
+                    <a href="#" class="btn btn-outline">
+                        Coming Soon
+                    </a>
+                </div>
+
+                <div class="project">
+                    <h3>Calculator</h3>
+                    <p>
+                        A simple calculator project built to
+                        practice JavaScript fundamentals.
+                    </p>
+
+                    <a href="#" class="btn btn-outline">
+                        Coming Soon
+                    </a>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+        <div class="container">
+
+            <div class="section-title">
+                <h2>Contact Me</h2>
+                <p>Let's connect</p>
+            </div>
+
+            <div class="contact-box">
+
+                <h3>Interested in working together?</h3>
+
+                <p>
+                    I am always interested in learning new things,
+                    working on projects and connecting with other
+                    developers.
+                </p>
+
+                <div class="buttons"
+                     style="justify-content:center;">
+
+                    <a href="https://github.com/"
+                       target="_blank"
+                       class="btn btn-primary">
+                        GitHub
+                    </a>
+
+                    <a href="mailto:your@email.com"
+                       class="btn btn-outline">
+                        Email Me
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>
+            © 2026 <span>Your Name</span>.
+            All Rights Reserved.
+        </p>
+
+        <p>
+            Built with HTML & CSS ❤️
+        </p>
+    </footer>
+
+</body>
+              </html>
