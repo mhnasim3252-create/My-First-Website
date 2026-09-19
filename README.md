@@ -7,7 +7,7 @@
     <title>Mahfuz Hasan Nasim | Web Developer Portfolio</title>
 
     <meta name="description"
-        content="Mahfuz Hasan Nasim - Diploma in Computer Technology student and Web Development Learner.">
+        content="Mahfuz Hasan Nasim - Diploma in Computer Science and  Technology student at Gopalganj Govt.Polytecnic Institute and Web Development Learner.">
 
     <meta name="author" content="Mahfuz Hasan Nasim">
 
